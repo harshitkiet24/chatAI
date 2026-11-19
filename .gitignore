@@ -1,5 +1,13 @@
 node_modules/
-dist/
+client/dist/
+server/data/
+
 .env
-server/data/*.db
-server/data/*.db-*
+.env.*
+!.env.example
+
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

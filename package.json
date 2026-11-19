@@ -1,6 +1,10 @@
 {
   "name": "chatai",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/harshitkiet24/chatAI.git"
+  },
   "scripts": {
     "build": "npm ci --prefix server --omit=dev && npm ci --prefix client --include=dev && npm --prefix client run build",
     "start": "node server/index.js",

@@ -7,6 +7,8 @@ A full-stack, real-time chat app with public channels, direct messages, authenti
 Prerequisite: Node.js 20 or later.
 
 ```bash
+git clone https://github.com/harshitkiet24/chatAI.git
+cd chatAI
 npm run install:all
 npm run dev
 ```
@@ -35,7 +37,9 @@ CLIENT_URL=http://localhost:5173
 
 ## Deploy on Render
 
-Create a Node web service using the repository root. Set the build command to `npm run build`, the start command to `npm start`, and the health check path to `/api/health`.
+Connect this GitHub repository to Render and create a Blueprint from `render.yaml`. When Render prompts for `CLIENT_URL`, enter the public service URL, such as `https://your-service.onrender.com`.
+
+For a manual web-service setup, use `npm run build` as the build command, `npm start` as the start command, and `/api/health` as the health check path.
 
 Set `NODE_ENV=production`, a strong random `JWT_SECRET`, and `CLIENT_URL` to the service's public origin (for example, `https://your-service.onrender.com`). The server listens on Render's `PORT` and serves the built React app, REST API, and Socket.io on that port. Leave `VITE_API_URL` unset for this deployment. Setting it at build time overrides the Socket.io origin.
 
